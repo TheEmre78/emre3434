@@ -32,7 +32,7 @@ $(function() {
     if (data.numUsers === 1) {
       message += "1 kişi var";
     } else {
-      message += "there are " + data.numUsers + " participants";
+      message += "Şuan Aktif " + data.numUsers + " Kullanıcı Var";
     }
     log(message);
   }
@@ -231,7 +231,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
+    var message = "Hoşgeldiniz";
     log(message, {
       prepend: true
     });
@@ -244,25 +244,25 @@ $(function() {
   });
 
   // Whenever the server emits 'user joined', log it in the chat body
-  socket.on('user joined', function (data) {
+  socket.on('Kullanıcı Giriş Yaptı', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
-  socket.on('user left', function (data) {
+  socket.on('Kullanıcı Çıkış Yaptı.', function (data) {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);
   });
 
   // Whenever the server emits 'typing', show the typing message
-  socket.on('typing', function (data) {
+  socket.on('Yaziyor', function (data) {
     addChatTyping(data);
   });
 
   // Whenever the server emits 'stop typing', kill the typing message
-  socket.on('stop typing', function (data) {
+  socket.on('Yazmayi Bırakti', function (data) {
     removeChatTyping(data);
   });
 });

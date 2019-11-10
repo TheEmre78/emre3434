@@ -244,13 +244,13 @@ $(function() {
   });
 
   // Whenever the server emits 'user joined', log it in the chat body
-  socket.on('Kullanıcı Giriş Yaptı', function (data) {
+  socket.on('Kullanici Giris Yapti', function (data) {
     log(data.username + ' joined');
     addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
-  socket.on('Kullanıcı Çıkış Yaptı.', function (data) {
+  socket.on('Kullanici Çikiş Yapti.', function (data) {
     log(data.username + ' left');
     addParticipantsMessage(data);
     removeChatTyping(data);

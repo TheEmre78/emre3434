@@ -1,1 +1,1 @@
-bu site ı'm lordundur
+BU SİTE YUNUS VE YİİT TARAFINDAN DÜZENLENMİŞTİR.
